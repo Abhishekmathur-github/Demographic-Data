@@ -276,7 +276,7 @@ head(stats,n=stats$Birth.rate<=50)
 install.packages("ggplot2")
 library(ggplot2)
 ?qplot
-
+#creating various boxplots
 qplot(data=stats, x=Internet.users)
 qplot(data=stats, x= Internet.users, y= Birth.rate)
 qplot(data=stats, x=Internet.users,y=Birth.rate, size=I(03))
@@ -342,7 +342,8 @@ head(MergedDF)
 tail(MergedDF)
 
 qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03))
-# Adding shapes to vizualization
+# Adding shapes to vizualization on scatter plot
+
 qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(01))
 qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(02))
 qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(03))
@@ -369,3 +370,18 @@ qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03),
 qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(24))
 qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(25))
 qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(26))#Does not exist
+#Adding transparency to scatter plot
+
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.1))
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.2))
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.3))
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.4))
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.5))
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.6))
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.7))
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.8))
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.9))
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(1.0))
+
+#Adding title to graph
+qplot(data=MergedDF,x=Internet.users,y=Birth.rate , color= Regions , size=I(03), shape=I(19), alpha=I(0.6), main="Birth rate vs Internet users in 2012")
